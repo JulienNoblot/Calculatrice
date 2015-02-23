@@ -1,28 +1,149 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <iostream>
+#include <cstdint>
 
-# Precompiled Headers
-*.gch
-*.pch
+// Cette partie du code permet d'initialiser les calculs, on va indiquer a l'ordinateur comment effectuer les calculs que l'utilisateur aura choisi de faire.
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+// Addition avec des variables en int32_t
 
-# Fortran module files
-*.mod
+int32_t add( int32_t A , int32_t B)
+{
+	int32_t Resultat;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+	Resultat = A + B;
+	return Resultat;
+}
 
-# Executables
-*.exe
-*.out
-*.app
+// Soustraction avec des variables en int32_t
+
+int32_t sub( int32_t A , int32_t B)
+{
+	int32_t Resultat;
+
+	Resultat = A - B;
+	return Resultat;
+}
+
+// Multiplication avec des variables en int32_t
+
+int32_t mul( int32_t A , int32_t B)
+{
+	int32_t Resultat;
+
+	Resultat = A * B;
+	return Resultat;
+}
+
+// Division avec des variables en int32_t
+
+int32_t divi( int32_t A , int32_t B)
+{
+	int32_t Resultat;
+
+	Resultat = A / B;
+	return Resultat;
+}
+
+// Modulo avec des variables en int32_t
+
+int32_t mod( int32_t A , int32_t B)
+{
+	int32_t Resultat;
+
+	Resultat = A % B;
+	return Resultat;
+}
+using namespace std;
+ 
+int main()
+{
+	// déclaration des variables
+
+		int a, b, resultat;
+		int choix;
+ 
+	// Menu de la calculatrice
+
+	cout <<"\t\tBIENVENUE DANS LA CALCULATRICE !!!\n\n\n\n"<< endl; 
+	cout <<"\t\t\t\tHOME\n"<< endl;
+
+	// Choix du type de calculs
+
+    cout <<"Veuiller saisir le chiffre qui correspond a l'operation souhaitee\n"<< endl;
+ 
+    cout <<"1 Addition"<< endl;
+    cout <<"2 Soustraction"<< endl;
+    cout <<"3 Multiplication"<< endl;
+    cout <<"4 Division"<< endl;
+	cout <<"5 Modulo"<< endl;
+ 
+    cin >>choix;
+
+	// Le choix saisie par l'utilisateur est récupérer et renvoi au calcul correspondant
+
+     switch (choix)
+   {
+
+	// Addition
+
+    case 1:
+    printf("Entrer le premier nombre : ");
+	scanf("%d", &a);
+    printf("Entrer le second nombre : ");
+	scanf("%d", &b);
+
+	resultat = add( a , b);
+	cout<<"le resultat de l'addition "<<a<<" + "<<b<<" = "<<resultat<<endl;
+
+    break;
+
+	// Soustraction
+
+    case 2:
+    printf("Entrer le premier nombre : ");
+	scanf("%d", &a);
+    printf("Entrer le second nombre : ");
+	scanf("%d", &b);
+
+	resultat = sub( a , b);
+	cout<<"le resultat de la soustraction "<<a<<" - "<<b<<" = "<<resultat<<endl;
+    break;
+
+	// multiplication
+
+    case 3: 
+       printf("Entrer le premier nombre : ");
+	scanf("%d", &a);
+    printf("Entrer le second nombre : ");
+	scanf("%d", &b);
+
+	resultat = mul( a , b);
+	cout<<"le resultat de la multiplication "<<a<<" * "<<b<<" = "<<resultat<<endl;
+    break;
+
+	// Division
+
+    case 4:
+      printf("Entrer le premier nombre : ");
+	scanf("%d", &a);
+    printf("Entrer le second nombre : ");
+	scanf("%d", &b);
+
+	resultat = divi( a , b);
+	cout<<"le resultat de la division "<<a<<" / "<<b<<" = "<<resultat<<endl;
+    break;
+
+	// Modulo
+
+	case 5:
+       printf("Entrer le premier nombre : ");
+	scanf("%d", &a);
+    printf("Entrer le second nombre : ");
+	scanf("%d", &b);
+
+	resultat = mod( a , b);
+	cout<<"le resultat du modulo "<<a<<" % "<<b<<" = "<<resultat<<endl;
+
+   }
+ 
+    return 0;
+}
