@@ -84,6 +84,7 @@ int main()
    {
 
 	// Addition
+	// printf permet d'afficher un message à l'utilisateur et scanf permet de lire la saisie de l'utilisateur
 
     case 1:
     printf("Entrer le premier nombre : ");
@@ -91,6 +92,8 @@ int main()
     printf("Entrer le second nombre : ");
 	scanf("%d", &b);
 
+	//add, sub, mul, divi et mod, permet d'indiquer quel calcul effecter avec les deux variables
+	
 	resultat = add( a , b);
 	cout<<"le resultat de l'addition "<<a<<" + "<<b<<" = "<<resultat<<endl;
 
@@ -109,7 +112,7 @@ int main()
     break;
 
 	// multiplication
-
+	
     case 3: 
        printf("Entrer le premier nombre : ");
 	scanf("%d", &a);
